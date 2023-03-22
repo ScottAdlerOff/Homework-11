@@ -67,6 +67,6 @@ public class Main {
         System.out.println(" ");
         int deliveryDistance = 95;
         int dayDelivery = 1;
-        chekingDistance(deliveryDistance);
+        chekingDistance(deliveryDistance, dayDelivery);
     }
 }
