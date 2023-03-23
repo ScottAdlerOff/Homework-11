@@ -1,13 +1,9 @@
 public class Main {
     public static int checkingYear(int year) {
-        if (year % 100 == 0 && year % 400 == 0) {
-            System.out.println(year + " год является високосным");
-        } else if (year % 4 == 0 && year % 100 > 0) {
-            System.out.println(year + " год является високосным");
-        } else if (year % 100 == 0)
-            System.out.println(year + " год не является високосным");
-        else {
-            System.out.println(year + " год не является високосным");
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            System.out.println("год является високосным");
+        } else {
+            System.out.println("год не является високосным");
         }
         return year;
     }
@@ -35,7 +31,7 @@ public class Main {
         else {
             System.out.println("Доставки нет");
         }
-        return day;
+        return distance;
     }
 
     public static void main(String[] args) {
