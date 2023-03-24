@@ -25,17 +25,21 @@ public class Main {
         return os;
     }
 
-    public static int chekingDistance(int distance, int day){
+    public static int chekingDistance(int distance){
+        int days = 1;
         if (distance <= 20) {
-            System.out.println("Потребуется дней: " + day);
+            System.out.println("Потребуется дней: " + days);
+            return days;
         } else if (distance >= 20 && distance <= 60) {
-            System.out.println("Потребуется дней: " + (day + 1));
-        } else if (distance >= 60 && distance <= 100)
-            System.out.println("Потребуется дней: " + (day + 2));
+            System.out.println("Потребуется дней: " + (days + 1));
+            return days + 1;
+        } else if (distance >= 60 && distance <= 100){
+            System.out.println("Потребуется дней: " + (days + 2));
+        return days +2;}
         else {
             System.out.println("Доставки нет");
+            return 0;
         }
-        return day;
     }
 
     public static void main(String[] args) {
@@ -67,6 +71,6 @@ public class Main {
         System.out.println(" ");
         int deliveryDistance = 95;
         int dayDelivery = 1;
-        chekingDistance(deliveryDistance, dayDelivery);
+        chekingDistance(deliveryDistance);
     }
 }
